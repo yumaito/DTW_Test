@@ -4,67 +4,67 @@
         <name>DTW_Library</name>
     </assembly>
     <members>
-        <member name="T:DTW_Library.PathPattern">
+        <member name="T:DTW.PathPattern">
             <summary>
             経路の移動パターン
             </summary>
         </member>
-        <member name="F:DTW_Library.PathPattern.Both">
+        <member name="F:DTW.PathPattern.Both">
             <summary>
             両方（斜め下）
             </summary>
         </member>
-        <member name="F:DTW_Library.PathPattern.Original">
+        <member name="F:DTW.PathPattern.Original">
             <summary>
             比較元のみ（右）
             </summary>
         </member>
-        <member name="F:DTW_Library.PathPattern.Subject">
+        <member name="F:DTW.PathPattern.Subject">
             <summary>
             比較対象のみ（下）
             </summary>
         </member>
-        <member name="T:DTW_Library.BasicDTW`1">
+        <member name="T:DTW.BasicDTW`1">
             <summary>
             単一の系列を扱うDTWの抽象クラス
             </summary>
         </member>
-        <member name="T:DTW_Library.IDTW_base">
+        <member name="T:DTW.IDTW_base">
             <summary>
             DTWのベースとなるインターフェース
             </summary>
         </member>
-        <member name="F:DTW_Library.BasicDTW`1.originalLength">
+        <member name="F:DTW.BasicDTW`1.originalLength">
             <summary>
             比較元の配列の長さ
             </summary>
         </member>
-        <member name="F:DTW_Library.BasicDTW`1.subjectLength">
+        <member name="F:DTW.BasicDTW`1.subjectLength">
             <summary>
             比較対象の配列の長さ
             </summary>
         </member>
-        <member name="F:DTW_Library.BasicDTW`1.costField">
+        <member name="F:DTW.BasicDTW`1.costField">
             <summary>
             コストの初期値
             </summary>
         </member>
-        <member name="F:DTW_Library.BasicDTW`1.dp">
+        <member name="F:DTW.BasicDTW`1.dp">
             <summary>
             距離関数
             </summary>
         </member>
-        <member name="F:DTW_Library.BasicDTW`1.original">
+        <member name="F:DTW.BasicDTW`1.original">
             <summary>
             実際に比較する配列（比較元）
             </summary>
         </member>
-        <member name="F:DTW_Library.BasicDTW`1.subject">
+        <member name="F:DTW.BasicDTW`1.subject">
             <summary>
             実際に比較する配列（比較対象）
             </summary>
         </member>
-        <member name="M:DTW_Library.BasicDTW`1.#ctor(`0[],`0[],DTW_Library.IDistance{`0})">
+        <member name="M:DTW.BasicDTW`1.#ctor(`0[],`0[],DTW.IDistance{`0})">
             <summary>
             Type型の単一系列のマッチング
             </summary>
@@ -72,7 +72,7 @@
             <param name="subject">比較対象配列</param>
             <param name="dp">距離関数の指定</param>
         </member>
-        <member name="M:DTW_Library.BasicDTW`1.#ctor(`0[],`0[],DTW_Library.IDistance{`0},System.Int32)">
+        <member name="M:DTW.BasicDTW`1.#ctor(`0[],`0[],DTW.IDistance{`0},System.Int32)">
             <summary>
             Type型の単一系列のマッチング
             </summary>
@@ -81,29 +81,29 @@
             <param name="dp">距離関数の指定</param>
             <param name="shift">ずれコスト</param>
         </member>
-        <member name="M:DTW_Library.BasicDTW`1.DTW">
+        <member name="M:DTW.BasicDTW`1.DTW">
             <summary>
             DTW本体
             </summary>
         </member>
-        <member name="M:DTW_Library.BasicDTW`1.CalcPath">
+        <member name="M:DTW.BasicDTW`1.CalcPath">
             <summary>
             経路計算
             </summary>
         </member>
-        <member name="M:DTW_Library.BasicDTW`1.PrimaryCostField">
+        <member name="M:DTW.BasicDTW`1.PrimaryCostField">
             <summary>
             初期状態の距離計算
             </summary>
         </member>
-        <member name="M:DTW_Library.BasicDTW`1.DTW_Run">
+        <member name="M:DTW.BasicDTW`1.DTW_Run">
             <summary>
             DTW距離の計算に必要なメソッドを実行するメソッド
             コンストラクタで実行済み
             特に呼び出す必要はなし
             </summary>
         </member>
-        <member name="M:DTW_Library.BasicDTW`1.IsPath(System.Int32,System.Int32)">
+        <member name="M:DTW.BasicDTW`1.IsPath(System.Int32,System.Int32)">
             <summary>
             指定した要素の組合せが経路になっているかどうか
             </summary>
@@ -111,46 +111,46 @@
             <param name="j">比較対象（subject）系列の要素番号</param>
             <returns>経路になっていればtrue、なっていなければfalse</returns>
         </member>
-        <member name="M:DTW_Library.BasicDTW`1.originalPairNum(System.Int32)">
+        <member name="M:DTW.BasicDTW`1.originalPairNum(System.Int32)">
             <summary>
             originalの指定した要素と対応している要素番号をリスト形式で返すメソッド
             </summary>
             <param name="num"></param>
             <returns></returns>
         </member>
-        <member name="M:DTW_Library.BasicDTW`1.subjectPairNum(System.Int32)">
+        <member name="M:DTW.BasicDTW`1.subjectPairNum(System.Int32)">
             <summary>
             subjectの指定した要素と対応している要素番号をリスト形式で返すメソッド
             </summary>
             <param name="num"></param>
             <returns></returns>
         </member>
-        <member name="P:DTW_Library.BasicDTW`1.Path">
+        <member name="P:DTW.BasicDTW`1.Path">
             <summary>
             DPマッチング時の経路
             </summary>
         </member>
-        <member name="P:DTW_Library.BasicDTW`1.Distance">
+        <member name="P:DTW.BasicDTW`1.Distance">
             <summary>
             DPマッチング（DTW）距離
             </summary>
         </member>
-        <member name="P:DTW_Library.BasicDTW`1.Cost">
+        <member name="P:DTW.BasicDTW`1.Cost">
             <summary>
             最終的なコスト
             </summary>
         </member>
-        <member name="P:DTW_Library.BasicDTW`1.From">
+        <member name="P:DTW.BasicDTW`1.From">
             <summary>
             どこからきたかを表す配列
             </summary>
         </member>
-        <member name="T:DTW_Library.DTW_Path">
+        <member name="T:DTW.DTW_Path">
             <summary>
             DTW計算時の経路と比較要素が一致しているかを管理するクラス
             </summary>
         </member>
-        <member name="M:DTW_Library.DTW_Path.#ctor(System.Int32,System.Int32,System.Boolean)">
+        <member name="M:DTW.DTW_Path.#ctor(System.Int32,System.Int32,System.Boolean)">
             <summary>
             DTW_Pathのコンストラクタ
             </summary>
@@ -158,79 +158,79 @@
             <param name="subject">比較対象のid番号</param>
             <param name="match">比較している要素同士が一致しているか否か</param>
         </member>
-        <member name="P:DTW_Library.DTW_Path.Original">
+        <member name="P:DTW.DTW_Path.Original">
             <summary>
             比較元のid番号
             </summary>
         </member>
-        <member name="P:DTW_Library.DTW_Path.Subject">
+        <member name="P:DTW.DTW_Path.Subject">
             <summary>
             比較対象のid番号
             </summary>
         </member>
-        <member name="P:DTW_Library.DTW_Path.Match">
+        <member name="P:DTW.DTW_Path.Match">
             <summary>
             比較している要素同士が一致しているか否か
             </summary>
         </member>
-        <member name="T:DTW_Library.DistanceFunction">
+        <member name="T:DTW.DistanceFunction">
             <summary>
             距離関数の種類
             </summary>
         </member>
-        <member name="F:DTW_Library.DistanceFunction.Numerical">
+        <member name="F:DTW.DistanceFunction.Numerical">
             <summary>
             数値の距離関数
             </summary>
         </member>
-        <member name="F:DTW_Library.DistanceFunction.TextString">
+        <member name="F:DTW.DistanceFunction.TextString">
             <summary>
             文字列の距離関数
             </summary>
         </member>
-        <member name="F:DTW_Library.DistanceFunction.EuclidianDistance">
+        <member name="F:DTW.DistanceFunction.EuclidianDistance">
             <summary>
             ユークリッド距離
             </summary>
         </member>
-        <member name="F:DTW_Library.DistanceFunction.ManhattanDistance">
+        <member name="F:DTW.DistanceFunction.ManhattanDistance">
             <summary>
             マンハッタン距離
             </summary>
         </member>
-        <member name="F:DTW_Library.DistanceFunction.ZeroCost">
+        <member name="F:DTW.DistanceFunction.ZeroCost">
             <summary>
             コストなし
             </summary>
         </member>
-        <member name="F:DTW_Library.DistanceFunction.Hamming">
+        <member name="F:DTW.DistanceFunction.Hamming">
             <summary>
             ハミング距離
             </summary>
         </member>
-        <member name="F:DTW_Library.DistanceFunction.MatrixHamming">
+        <member name="F:DTW.DistanceFunction.MatrixHamming">
             <summary>
             行列のハミング距離
             </summary>
         </member>
-        <member name="F:DTW_Library.DistanceFunction.DTW_int">
+        <member name="F:DTW.DistanceFunction.DTW_int">
             <summary>
             DTW距離（int型）
             </summary>
         </member>
-        <member name="F:DTW_Library.DistanceFunction.DTW_string">
+        <member name="F:DTW.DistanceFunction.DTW_string">
             <summary>
             DTW距離（string型）
             </summary>
         </member>
-        <member name="T:DTW_Library.IDistance`1">
+        <member name="T:DTW.IDistance`1">
             <summary>
             距離関数インターフェース
             このインターフェースを継承することで独自の距離関数を定義可能
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="M:DTW_Library.IDistance`1.DP(`0,`0)">
+        <member name="M:DTW.IDistance`1.DP(`0,`0)">
             <summary>
             距離関数
             </summary>
@@ -238,18 +238,18 @@
             <param name="y">比較対象</param>
             <returns>xとyの距離</returns>
         </member>
-        <member name="M:DTW_Library.IDistance`1.getDistanceFunction">
+        <member name="M:DTW.IDistance`1.getDistanceFunction">
             <summary>
             距離関数の種類
             </summary>
             <returns></returns>
         </member>
-        <member name="T:DTW_Library.NumericDistance">
+        <member name="T:DTW.NumericDistance">
             <summary>
             数値データの距離関数
             </summary>
         </member>
-        <member name="M:DTW_Library.NumericDistance.DP(System.Int32,System.Int32)">
+        <member name="M:DTW.NumericDistance.DP(System.Int32,System.Int32)">
             <summary>
             距離関数（数直線）
             </summary>
@@ -257,18 +257,18 @@
             <param name="y">int型の数値</param>
             <returns>2つの値の差の絶対値</returns>
         </member>
-        <member name="M:DTW_Library.NumericDistance.getDistanceFunction">
+        <member name="M:DTW.NumericDistance.getDistanceFunction">
             <summary>
             距離関数の種類を返す
             </summary>
             <returns></returns>
         </member>
-        <member name="T:DTW_Library.StringDistance">
+        <member name="T:DTW.StringDistance">
             <summary>
             文字列データの距離関数
             </summary>
         </member>
-        <member name="M:DTW_Library.StringDistance.DP(System.String,System.String)">
+        <member name="M:DTW.StringDistance.DP(System.String,System.String)">
             <summary>
             距離関数（文字列）
             </summary>
@@ -276,18 +276,18 @@
             <param name="y">string型の値</param>
             <returns></returns>
         </member>
-        <member name="M:DTW_Library.StringDistance.getDistanceFunction">
+        <member name="M:DTW.StringDistance.getDistanceFunction">
             <summary>
             距離関数の種類
             </summary>
             <returns></returns>
         </member>
-        <member name="T:DTW_Library.EuclidianDistance">
+        <member name="T:DTW.EuclidianDistance">
             <summary>
             距離関数（ユークリッド距離）
             </summary>
         </member>
-        <member name="M:DTW_Library.EuclidianDistance.DP(System.Drawing.Point,System.Drawing.Point)">
+        <member name="M:DTW.EuclidianDistance.DP(System.Drawing.Point,System.Drawing.Point)">
             <summary>
             距離関数（２次元のユークリッド距離）
             </summary>
@@ -295,18 +295,18 @@
             <param name="y">Point型の値</param>
             <returns>2点間の距離</returns>
         </member>
-        <member name="M:DTW_Library.EuclidianDistance.getDistanceFunction">
+        <member name="M:DTW.EuclidianDistance.getDistanceFunction">
             <summary>
             距離関数の種類
             </summary>
             <returns></returns>
         </member>
-        <member name="T:DTW_Library.ManhattanDistance">
+        <member name="T:DTW.ManhattanDistance">
             <summary>
             距離関数（マンハッタン距離）
             </summary>
         </member>
-        <member name="M:DTW_Library.ManhattanDistance.DP(System.Drawing.Point,System.Drawing.Point)">
+        <member name="M:DTW.ManhattanDistance.DP(System.Drawing.Point,System.Drawing.Point)">
             <summary>
             距離関数（マンハッタン距離）
             </summary>
@@ -314,18 +314,18 @@
             <param name="y">Point型の値</param>
             <returns></returns>
         </member>
-        <member name="M:DTW_Library.ManhattanDistance.getDistanceFunction">
+        <member name="M:DTW.ManhattanDistance.getDistanceFunction">
             <summary>
             距離関数の種類
             </summary>
             <returns></returns>
         </member>
-        <member name="T:DTW_Library.ShortDistance">
+        <member name="T:DTW.ShortDistance">
             <summary>
             short型の距離関数クラス
             </summary>
         </member>
-        <member name="M:DTW_Library.ShortDistance.DP(System.Int16,System.Int16)">
+        <member name="M:DTW.ShortDistance.DP(System.Int16,System.Int16)">
             <summary>
             距離関数（short型、文字列と同じ扱い）
             </summary>
@@ -333,18 +333,18 @@
             <param name="y"></param>
             <returns></returns>
         </member>
-        <member name="M:DTW_Library.ShortDistance.getDistanceFunction">
+        <member name="M:DTW.ShortDistance.getDistanceFunction">
             <summary>
             距離関数の種類
             </summary>
             <returns></returns>
         </member>
-        <member name="T:DTW_Library.ZeroCost">
+        <member name="T:DTW.ZeroCost">
             <summary>
             文字列の一致にかかわらずコストをかけない
             </summary>
         </member>
-        <member name="M:DTW_Library.ZeroCost.DP(System.String,System.String)">
+        <member name="M:DTW.ZeroCost.DP(System.String,System.String)">
             <summary>
             距離関数（コストなし）
             </summary>
@@ -352,18 +352,18 @@
             <param name="y"></param>
             <returns></returns>
         </member>
-        <member name="M:DTW_Library.ZeroCost.getDistanceFunction">
+        <member name="M:DTW.ZeroCost.getDistanceFunction">
             <summary>
             距離関数の種類
             </summary>
             <returns></returns>
         </member>
-        <member name="T:DTW_Library.HammingDistance">
+        <member name="T:DTW.HammingDistance">
             <summary>
             距離関数（ハミング距離）
             </summary>
         </member>
-        <member name="M:DTW_Library.HammingDistance.DP(System.String[],System.String[])">
+        <member name="M:DTW.HammingDistance.DP(System.String[],System.String[])">
             <summary>
             距離関数（ハミング距離）
             </summary>
@@ -371,23 +371,23 @@
             <param name="y">string型の配列</param>
             <returns></returns>
         </member>
-        <member name="M:DTW_Library.HammingDistance.getDistanceFunction">
+        <member name="M:DTW.HammingDistance.getDistanceFunction">
             <summary>
             距離関数の種類
             </summary>
             <returns></returns>
         </member>
-        <member name="T:DTW_Library.MatrixHammingDistance">
+        <member name="T:DTW.MatrixHammingDistance">
             <summary>
             行列のハミング距離（データは必ず多次元配列）
             </summary>
         </member>
-        <member name="M:DTW_Library.MatrixHammingDistance.#ctor">
+        <member name="M:DTW.MatrixHammingDistance.#ctor">
             <summary>
             ハミング距離（多次元配列、同じ次元数）
             </summary>
         </member>
-        <member name="M:DTW_Library.MatrixHammingDistance.DP(System.String[0:,0:],System.String[0:,0:])">
+        <member name="M:DTW.MatrixHammingDistance.DP(System.String[0:,0:],System.String[0:,0:])">
             <summary>
             距離関数（行列のハミング距離）
             </summary>
@@ -395,18 +395,18 @@
             <param name="y">2次元配列</param>
             <returns></returns>
         </member>
-        <member name="M:DTW_Library.MatrixHammingDistance.getDistanceFunction">
+        <member name="M:DTW.MatrixHammingDistance.getDistanceFunction">
             <summary>
             距離関数の種類
             </summary>
             <returns></returns>
         </member>
-        <member name="T:DTW_Library.DTWDistanceInt">
+        <member name="T:DTW.DTWDistanceInt">
             <summary>
             DTW距離（int型）
             </summary>
         </member>
-        <member name="M:DTW_Library.DTWDistanceInt.DP(System.Int32[],System.Int32[])">
+        <member name="M:DTW.DTWDistanceInt.DP(System.Int32[],System.Int32[])">
             <summary>
             距離関数（int型のdtw距離）
             </summary>
@@ -414,18 +414,18 @@
             <param name="y">int型の配列</param>
             <returns></returns>
         </member>
-        <member name="M:DTW_Library.DTWDistanceInt.getDistanceFunction">
+        <member name="M:DTW.DTWDistanceInt.getDistanceFunction">
             <summary>
             距離関数の種類
             </summary>
             <returns></returns>
         </member>
-        <member name="T:DTW_Library.DTWDistanceString">
+        <member name="T:DTW.DTWDistanceString">
             <summary>
             DTW距離（string型）
             </summary>
         </member>
-        <member name="M:DTW_Library.DTWDistanceString.DP(System.String[],System.String[])">
+        <member name="M:DTW.DTWDistanceString.DP(System.String[],System.String[])">
             <summary>
             距離関数（string型のdtw距離）
             </summary>
@@ -433,18 +433,18 @@
             <param name="y">string型の配列</param>
             <returns></returns>
         </member>
-        <member name="M:DTW_Library.DTWDistanceString.getDistanceFunction">
+        <member name="M:DTW.DTWDistanceString.getDistanceFunction">
             <summary>
             距離関数の種類
             </summary>
             <returns></returns>
         </member>
-        <member name="T:DTW_Library.EuclidieanSpace">
+        <member name="T:DTW.EuclidieanSpace">
             <summary>
             ユークリッド距離
             </summary>
         </member>
-        <member name="M:DTW_Library.EuclidieanSpace.DP(System.Int16[],System.Int16[])">
+        <member name="M:DTW.EuclidieanSpace.DP(System.Int16[],System.Int16[])">
             <summary>
             距離関数（ユークリッド距離）
             </summary>
@@ -452,7 +452,7 @@
             <param name="y">short型の配列</param>
             <returns>同じ要素同士の差の２乗の和の累乗根</returns>
         </member>
-        <member name="M:DTW_Library.EuclidieanSpace.getDistanceFunction">
+        <member name="M:DTW.EuclidieanSpace.getDistanceFunction">
             <summary>
             距離関数の種類
             </summary>

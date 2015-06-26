@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace DTW_Library
+namespace DTW
 {
     /// <summary>
     /// DTW計算時の経路と比較要素が一致しているかを管理するクラス

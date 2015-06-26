@@ -1,0 +1,10 @@
+C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Library\bin\Debug\Basic\DTW.cs
+C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Library\bin\Debug\Basic\DTW_Path.cs
+C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Library\bin\Debug\Basic\IDTW_base.cs
+C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Library\bin\Debug\distance\IDistance.cs
+C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Library\bin\Debug\DTW_Library.XML
+C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Library\bin\Debug\DTW_Library.dll
+C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Library\bin\Debug\DTW_Library.pdb
+C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Library\obj\Debug\DTW.csprojResolveAssemblyReference.cache
+C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Library\obj\Debug\DTW_Library.dll
+C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Library\obj\Debug\DTW_Library.pdb

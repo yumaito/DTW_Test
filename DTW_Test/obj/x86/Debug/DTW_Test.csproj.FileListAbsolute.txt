@@ -26,10 +26,6 @@ C:\MyApps\class\DTW_Test\DTW_Test\obj\x86\Debug\DTW_Test.csprojResolveAssemblyRe
 C:\MyApps\class\DTW_Test\DTW_Test\obj\x86\Debug\DTW_Test.csproj.GenerateResource.Cache
 C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Test\obj\x86\Debug\DTW_Test.exe
 C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Test\obj\x86\Debug\DTW_Test.pdb
-C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Test\bin\Debug\Basic\DTW_Path.cs
-C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Test\bin\Debug\Basic\IDTW_base.cs
-C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Test\bin\Debug\distance\IDistance.cs
-C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Test\bin\Debug\Basic\DTW.cs
 C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Test\bin\Debug\DTW_Test.exe
 C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Test\bin\Debug\DTW_Test.pdb
 C:\Users\悠真\Desktop\MyApps\class\DTW_Test\DTW_Test\bin\Debug\DTW_Library.dll

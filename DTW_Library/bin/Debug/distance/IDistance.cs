@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace DTW_Library
+namespace DTW
 {
     /// <summary>
     /// 距離関数の種類

@@ -1,12 +1,14 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTW_Test", "DTW_Test\DTW_Test.csproj", "{EF2A57BD-D7C8-49E6-BD46-B138ED6CBDF0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D8DB2E7B-276C-4374-B019-F1FBD6A8D566} = {D8DB2E7B-276C-4374-B019-F1FBD6A8D566}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTW_Library", "DTW_Library\DTW_Library.csproj", "{D8DB2E7B-276C-4374-B019-F1FBD6A8D566}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTW", "DTW_Library\DTW.csproj", "{D8DB2E7B-276C-4374-B019-F1FBD6A8D566}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

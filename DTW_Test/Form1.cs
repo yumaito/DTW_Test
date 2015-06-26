@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using DTW_Library;
+using DTW;
 
 namespace DTW_Test
 {
@@ -21,10 +21,10 @@ namespace DTW_Test
         #region フィールド
         //MatchingInt matchingInt;
         //MatchingString matchingString;
-        DTW_Library.BasicDTW<int> dtwInt;
-        DTW_Library.BasicDTW<string> dtwString;
-        DTW_Library.BasicDTW<string[]> dtwStringArray;
-        DTW_Library.BasicDTW<int[]> dtwIntArray;
+        BasicDTW<int> dtwInt;
+        BasicDTW<string> dtwString;
+        BasicDTW<string[]> dtwStringArray;
+        BasicDTW<int[]> dtwIntArray;
         //DTW_Library.Distance<int> dpInt;
         //DTW_Library.Distance<string> dpString;
         //
@@ -268,7 +268,7 @@ namespace DTW_Test
                     if (i != 0 && j != 0)
                     {
                         string path = "";
-                        DTW_Library.PathPattern tempPath;
+                        PathPattern tempPath;
                         if (checkBoxIsNumeric.Checked)
                         {
                             tempPath = dtwInt.From[j - 1, i - 1];
@@ -277,19 +277,32 @@ namespace DTW_Test
                         {
                             tempPath = dtwString.From[j - 1, i - 1];
                         }
-
-                        if (tempPath == DTW_Library.PathPattern.Both)
+                        switch(tempPath)
                         {
-                            path = "＼";
+                            case PathPattern.Both:
+                                path = "＼";
+                                break;
+                            case PathPattern.Original:
+                                path = "←";
+                                break;
+                            case PathPattern.Subject:
+                                path="↑";
+                                break;
+                            default:
+                                break;
                         }
-                        else if (tempPath == DTW_Library.PathPattern.Original)
-                        {
-                            path = "←";
-                        }
-                        else
-                        {
-                            path = "↑";
-                        }
+                        //if (tempPath == PathPattern.both)
+                        //{
+                        //    path = "＼";
+                        //}
+                        //else if (tempPath == PathPattern.original)
+                        //{
+                        //    path = "←";
+                        //}
+                        //else
+                        //{
+                        //    path = "↑";
+                        //}
                         point = new Point(stringSize.Width * j + offset + secondOffset,
                             stringSize.Height * i + offset + secondOffset);
 
