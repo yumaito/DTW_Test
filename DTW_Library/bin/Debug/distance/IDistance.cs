@@ -327,7 +327,7 @@ namespace DTW
         public double DP(int[] x, int[] y)
         {
             double result = 0.0;
-            BasicDTW<int> dtw = new BasicDTW<int>(x, y, new NumericDistance());
+            BasicDTW<int> dtw = new BasicDTW<int>(x, y, new NumericDistance(), false);
             result = dtw.Distance;
             return result;
         }
@@ -354,7 +354,7 @@ namespace DTW
         public double DP(string[] x, string[] y)
         {
             double result = 0.0;
-            BasicDTW<string> dtw = new BasicDTW<string>(x, y, new StringDistance());
+            BasicDTW<string> dtw = new BasicDTW<string>(x, y, new StringDistance(), false);
             result = dtw.Distance;
             return result;
         }

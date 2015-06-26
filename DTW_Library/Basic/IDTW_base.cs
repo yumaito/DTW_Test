@@ -11,6 +11,6 @@ namespace DTW
     interface IDTW_base
     {
         //void PrimaryCostField();
-        void DTW_Run();
+        void DTW_Run(bool isPathCalc);
     }
 }

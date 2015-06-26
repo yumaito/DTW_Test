@@ -31,6 +31,8 @@ namespace DTW
         #region フィールド
 
         #region private
+        private DateTime startTime;
+        private DateTime endTime;
         //DPマッチングのコスト
         private int Shift_Pealty = 10;
         //内部での計算に用いる変数
@@ -110,6 +112,16 @@ namespace DTW
                 return from;
             }
         }
+        /// <summary>
+        /// 計算にかかった時間
+        /// </summary>
+        public TimeSpan CalcTime
+        {
+            get
+            {
+                return this.endTime - this.startTime;
+            }
+        }
         #endregion
 
         #endregion
@@ -121,8 +133,10 @@ namespace DTW
         /// <param name="original">比較元配列</param>
         /// <param name="subject">比較対象配列</param>
         /// <param name="dp">距離関数の指定</param>
-        public BasicDTW(Type[] original, Type[] subject, IDistance<Type> dp)
+        public BasicDTW(Type[] original, Type[] subject, IDistance<Type> dp, bool isPathCalc)
         {
+            //計算開始時刻
+            this.startTime = DateTime.Now;
             //int[][]のような２次元配列の場合は
             //Typeがint[]で、originalやsubjectはint[]の配列という位置づけ
             this.original = original;
@@ -135,7 +149,9 @@ namespace DTW
             //
             this.costField = new double[originalLength, subjectLength];
             //
-            this.DTW_Run();
+            this.DTW_Run(isPathCalc);
+            //計算終了時刻
+            this.endTime = DateTime.Now;
         }
 
         /// <summary>
@@ -145,7 +161,7 @@ namespace DTW
         /// <param name="subject">比較対象配列</param>
         /// <param name="dp">距離関数の指定</param>
         /// <param name="shift">ずれコスト</param>
-        public BasicDTW(Type[] original, Type[] subject, IDistance<Type> dp, int shift)
+        public BasicDTW(Type[] original, Type[] subject, IDistance<Type> dp, int shift, bool isPathCalc)
         {
             //int[][]のような２次元配列の場合は
             //Typeがint[]で、originalやsubjectはint[]の配列という位置づけ
@@ -159,7 +175,7 @@ namespace DTW
             //
             this.costField = new double[originalLength, subjectLength];
             //
-            this.DTW_Run();
+            this.DTW_Run(isPathCalc);
         }
         #endregion
 
@@ -282,14 +298,17 @@ namespace DTW
         /// コンストラクタで実行済み
         /// 特に呼び出す必要はなし
         /// </summary>
-        public void DTW_Run()
+        public void DTW_Run(bool isPathCalc)
         {
             //初期状態
             PrimaryCostField();
             //DTW本体の実行
             this.DTW();
-            //経路計算
-            this.CalcPath();
+            if (isPathCalc)
+            {
+                //経路計算
+                this.CalcPath();
+            }
         }
         /// <summary>
         /// 指定した要素の組合せが経路になっているかどうか

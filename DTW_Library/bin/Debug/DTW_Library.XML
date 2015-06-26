@@ -64,7 +64,7 @@
             実際に比較する配列（比較対象）
             </summary>
         </member>
-        <member name="M:DTW.BasicDTW`1.#ctor(`0[],`0[],DTW.IDistance{`0})">
+        <member name="M:DTW.BasicDTW`1.#ctor(`0[],`0[],DTW.IDistance{`0},System.Boolean)">
             <summary>
             Type型の単一系列のマッチング
             </summary>
@@ -72,7 +72,7 @@
             <param name="subject">比較対象配列</param>
             <param name="dp">距離関数の指定</param>
         </member>
-        <member name="M:DTW.BasicDTW`1.#ctor(`0[],`0[],DTW.IDistance{`0},System.Int32)">
+        <member name="M:DTW.BasicDTW`1.#ctor(`0[],`0[],DTW.IDistance{`0},System.Int32,System.Boolean)">
             <summary>
             Type型の単一系列のマッチング
             </summary>
@@ -96,7 +96,7 @@
             初期状態の距離計算
             </summary>
         </member>
-        <member name="M:DTW.BasicDTW`1.DTW_Run">
+        <member name="M:DTW.BasicDTW`1.DTW_Run(System.Boolean)">
             <summary>
             DTW距離の計算に必要なメソッドを実行するメソッド
             コンストラクタで実行済み
@@ -143,6 +143,11 @@
         <member name="P:DTW.BasicDTW`1.From">
             <summary>
             どこからきたかを表す配列
+            </summary>
+        </member>
+        <member name="P:DTW.BasicDTW`1.CalcTime">
+            <summary>
+            計算にかかった時間
             </summary>
         </member>
         <member name="T:DTW.DTW_Path">

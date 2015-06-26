@@ -77,7 +77,7 @@ namespace DTW_Test
                             else
                             {
                                 MessageBox.Show("数値データ以外が入力されました。\n文字列としてマッチングを行います。", "エラー");
-                                dtwStringArray = new BasicDTW<string[]>(originalArray, subjectArray, new DTWDistanceString());
+                                dtwStringArray = new BasicDTW<string[]>(originalArray, subjectArray, new DTWDistanceString(), true);
                                 textBoxDistance.Text = dtwStringArray.Distance.ToString();
                                 checkBoxIsNumeric.Checked = false;
                                 break;
@@ -93,12 +93,12 @@ namespace DTW_Test
                             }
                         }
                     }
-                    dtwIntArray = new BasicDTW<int[]>(originalIntArray, subjectIntArray, new DTWDistanceInt());
+                    dtwIntArray = new BasicDTW<int[]>(originalIntArray, subjectIntArray, new DTWDistanceInt(), true);
                     textBoxDistance.Text = dtwIntArray.Distance.ToString();
                 }
                 else
                 {
-                    dtwStringArray = new BasicDTW<string[]>(originalArray, subjectArray, new DTWDistanceString());
+                    dtwStringArray = new BasicDTW<string[]>(originalArray, subjectArray, new DTWDistanceString(), true);
                     textBoxDistance.Text = dtwStringArray.Distance.ToString();
                 }
             }
@@ -121,7 +121,7 @@ namespace DTW_Test
                         else
                         {
                             MessageBox.Show("数値データ以外が入力されました。\n文字列としてマッチングを行います。", "エラー");
-                            dtwString = new BasicDTW<string>(original, subject, new StringDistance());
+                            dtwString = new BasicDTW<string>(original, subject, new StringDistance(), true);
 
                             //matchingString = new MatchingString(original, subject);
                             textBoxDistance.Text = dtwString.Distance.ToString();
@@ -137,7 +137,7 @@ namespace DTW_Test
                         else
                         {
                             MessageBox.Show("数値データ以外が入力されました。\n文字列としてマッチングを行います。", "エラー");
-                            dtwString = new BasicDTW<string>(original, subject, new StringDistance());
+                            dtwString = new BasicDTW<string>(original, subject, new StringDistance(), true);
 
                             //matchingString = new MatchingString(original, subject);
                             textBoxDistance.Text = dtwString.Distance.ToString();
@@ -145,14 +145,14 @@ namespace DTW_Test
                             break;
                         }
                     }
-                    dtwInt = new BasicDTW<int>(originalInt, subjectInt, new NumericDistance());
+                    dtwInt = new BasicDTW<int>(originalInt, subjectInt, new NumericDistance(), true);
                     //matchingInt = new MatchingInt(originalInt, subjectInt);
                     textBoxDistance.Text = dtwInt.Distance.ToString();
                 }
                 else
                 {
                     //matchingString = new MatchingString(original, subject);
-                    dtwString = new BasicDTW<string>(original, subject, new StringDistance());
+                    dtwString = new BasicDTW<string>(original, subject, new StringDistance(), true);
                     textBoxDistance.Text = dtwString.Distance.ToString();
                 }
                 completeMatching = true;
