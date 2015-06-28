@@ -71,17 +71,30 @@ using DTW;
 ##### 距離関数の使い方
 
 距離関数は基本的に`IDistance<T>`を継承したクラスで定義されています。
-具体的にはIDsitance.cs内に実装してあります。  
+具体的にはIDsitance.cs内に実装してあります。
+
 例えば`NumericDistance`クラスは2要素の差を距離として扱う距離関数で、`StringDistance`は2要素が同じときは0、異なるときは5を距離とする距離関数です。  
 コンストラクタ上では次のように指定します。
 
-    ```csharp
-    int[] original = new int[]{...};
-    int[] subject = new int[]{...};
-    BasicDTW<int> dtw1 =  new BasicDTW<int>(original,subject,new NumericDistance(),true); 
-    //
-    string[] o = new string[]{...};
-    string[] s = new string[]{...};
-    BasicDTW<string> dtw2 = new BasicDTW<string>(o,s,new StringDistance(),true;)
-    ```
+   ```csharp
+   int[] original = new int[]{...};
+   int[] subject = new int[]{...};
+   BasicDTW<int> dtw1 =  new BasicDTW<int>(original,subject,new NumericDistance(),true); 
+   //
+   string[] o = new string[]{...};
+   string[] s = new string[]{...};
+   BasicDTW<string> dtw2 = new BasicDTW<string>(o,s,new StringDistance(),true);
+   ```
+ユークリッド距離、マンハッタン距離、など一般的な距離関数は予め実装してありますが、新たに独自の距離関数を用いたい場合は自身でカスタマイズすることも可能です。
 
+具体的な実装は以下のようなクラスを作って、`BasicDTW`のコンストラクタの引数としてください。ただし、コンストラクタと距離関数で`<Type>`の型は一致させてください。
+
+   ```csharp
+   public class MyDistanceFunction : IDistance<int>
+   {
+     public double DP(int x, int y)
+     {
+      //xとyの距離を求める処理を記述
+     }
+   }
+   ```
