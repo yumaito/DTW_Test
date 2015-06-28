@@ -1,7 +1,7 @@
 # DTW_Test
 DTW（DPマッチング）のC#用ライブラリ
 
-実装は次のサイトを参考にしました。コスト、経路等の用語はここを参考にしました。  
+実装は次のサイトを参考にしており、コスト、経路等の用語もここを参考にしています。  
 [https://staff.aist.go.jp/toru-nakata/dpmatching.html](https://staff.aist.go.jp/toru-nakata/dpmatching.html)
 
 ### 構成
