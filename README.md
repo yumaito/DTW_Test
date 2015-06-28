@@ -28,7 +28,7 @@ using DTW;
   そののちに以下のコンストラクタを呼び出します。
 
     ```csharp
-    BasicDTW<int> dtw = new BasicDTW<int>(original,subject,new NumericDistance(),true);
+    BasicDTW<int> dtw = new BasicDTW<int>(original, subject, new NumericDistance(), true);
     ```
     
     コンストラクタ呼び出し後、各プロパティやメソッドにアクセスすることで計算結果を得られます。
@@ -58,7 +58,7 @@ using DTW;
 3. 公開メソッド
 
     ```csharp
-    public bool IsPath(int i,int j) //指定した要素の組み合わせが経路になっているかどうか
+    public bool IsPath(int i, int j) //指定した要素の組み合わせが経路になっているかどうか
     public List<int> originalPairNum(int num) //originalの指定した要素と対応している要素番号をリスト形式で返すメソッド
     public List<int> subjectPairNum(int num) //subjectの指定した要素と対応している要素番号をリスト形式で返すメソッド
     ```
@@ -79,11 +79,11 @@ using DTW;
    ```csharp
    int[] original = new int[]{...};
    int[] subject = new int[]{...};
-   BasicDTW<int> dtw1 =  new BasicDTW<int>(original,subject,new NumericDistance(),true); 
+   BasicDTW<int> dtw1 =  new BasicDTW<int>(original, subject, new NumericDistance(), true); 
    //
    string[] o = new string[]{...};
    string[] s = new string[]{...};
-   BasicDTW<string> dtw2 = new BasicDTW<string>(o,s,new StringDistance(),true);
+   BasicDTW<string> dtw2 = new BasicDTW<string>(o, s, new StringDistance(), true);
    ```
 ユークリッド距離、マンハッタン距離、など一般的な距離関数は予め実装してありますが、新たに独自の距離関数を用いたい場合は自身でカスタマイズすることも可能です。
 
