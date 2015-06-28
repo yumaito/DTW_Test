@@ -66,7 +66,7 @@ namespace DTW
         /// 距離関数の種類
         /// </summary>
         /// <returns></returns>
-        DistanceFunction getDistanceFunction();
+        //DistanceFunction getDistanceFunction();
     }
     #region 単一データの距離関数
     /// <summary>

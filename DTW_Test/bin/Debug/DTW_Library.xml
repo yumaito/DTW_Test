@@ -243,12 +243,6 @@
             <param name="y">比較対象</param>
             <returns>xとyの距離</returns>
         </member>
-        <member name="M:DTW.IDistance`1.getDistanceFunction">
-            <summary>
-            距離関数の種類
-            </summary>
-            <returns></returns>
-        </member>
         <member name="T:DTW.NumericDistance">
             <summary>
             数値データの距離関数
