@@ -17,25 +17,24 @@ using DTW;
 
 ### 使い方
 
-1. 宣言  
   DTW距離を計算したい2つの配列を用意します。今回はint型の配列にしました。
 
-    ```csharp
-    int[] original = new int[]{...};
-    int[] subject = new int[]{...};
-    ```
+   ```csharp
+   int[] original = new int[]{...};
+   int[] subject = new int[]{...};
+   ```
 
   そののちに以下のコンストラクタを呼び出します。
 
-    ```csharp
-    BasicDTW<int> dtw = new BasicDTW<int>(original, subject, new NumericDistance(), true);
-    ```
+   ```csharp
+   BasicDTW<int> dtw = new BasicDTW<int>(original, subject, new NumericDistance(), true);
+   ```
     
-    コンストラクタ呼び出し後、各プロパティやメソッドにアクセスすることで計算結果を得られます。
+  コンストラクタ呼び出し後、各プロパティやメソッドにアクセスすることで計算結果を得られます。
     
-    ```csharp
-    double d = dtw.Distance; //DTW距離
-    ```
+   ```csharp
+   double d = dtw.Distance; //DTW距離
+   ```
 
 
 
