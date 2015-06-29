@@ -135,7 +135,6 @@ namespace DTW
         /// <param name="dp">距離関数の指定</param>
         public BasicDTW(Type[] original, Type[] subject, IDistance<Type> dp, bool isPathCalc)
         {
-            
             //計算開始時刻
             this.startTime = DateTime.Now;
             //int[][]のような２次元配列の場合は

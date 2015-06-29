@@ -142,7 +142,7 @@ namespace DTW
         /// <returns>2点間の距離</returns>
         public double DP(Point x, Point y)
         {
-            double result = Math.Sqrt(Math.Pow(x.X - y.Y, 2) + Math.Pow(x.Y - y.Y, 2));
+            double result = Math.Sqrt(Math.Pow(x.X - y.X, 2) + Math.Pow(x.Y - y.Y, 2));
             return result;
         }
         /// <summary>
